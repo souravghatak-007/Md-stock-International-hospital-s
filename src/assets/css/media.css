@@ -30,10 +30,7 @@
 
 
 @media (max-width: 1680px) {
-    .nmsfunneldoctor_formblock h2 {
-        font-size: 20px;
-        line-height: 22px;
-    }
+     
 
     .nmsfunneldoctor_formblock h3 {
         font-size: 24px;
@@ -54,13 +51,7 @@
     .nmsfunneldoctor_block2_left h4 span {
         font-size: 30px;
     }
-    .btnleftinfo h2 {
-        font-size: 23px;
-        line-height: 27px;
-        width: 62%;
-        top: 45%;
-        left: 60%
-    }
+   
     .nmsfunneldoctor_block2_left_content2 { max-width: 830px; }
 
     .nmsfunneldoctor_block_wrapper {width:96% !important;}
@@ -79,6 +70,9 @@
         line-height: 21px;
     }
 
+    /* new html */
+    .landingleftimg1man { left: -90px; }
+    .nmsfunneldoctor_block2_right { width: 24%; padding: 0; }
 }
 
 
@@ -165,7 +159,7 @@
 
 @media (max-width: 1550px) {
     .btnleftinfo h2 {
-        font-size: 22px;
+        font-size: 22px; top: 40%;
     }
 }
 
@@ -206,12 +200,9 @@
 @media (max-width: 1500px){
   .nmsfunneldoctor_block2_left h3 { font-size: 30px; }
     .nmsfunneldoctor_block6_right h2 { font-size: 40px; line-height: 48px; }
-    .nmsfunneldoctor_block2_left h4 span { width: 65%;      font-size: 26px;
-      line-height: 36px!important;}
-    .nmsfunneldoctor_block2_left_content2 { max-width: 660px; }
-    .nmsfunneldoctor_block2_left_content2 h2 { line-height: 28px;}
-    .btnleftinfo h2 { font-size: 19px; line-height: 24px; width: 58%; top: 38%; left: 62%;
-    }
+    .nmsfunneldoctor_block2_left h4 span { width: 80%; font-size: 26px; line-height: 36px!important;}
+    .nmsfunneldoctor_block2_left_content2 { max-width: 660px; } 
+     
 
     .nmsfunneldoctor_block6_right h2 {
         font-size: 40px;
@@ -331,10 +322,8 @@
         font-size: 17px;
         line-height: 20px;
     }
-
-    .landingleftimg1man {
-        bottom: -90px;
-    }
+    .landingleftimg1man { left: -6%; }
+    
 }
 
 
@@ -357,11 +346,7 @@
         line-height: 30px;
     }
 
-    .nmsfunneldoctor_block2_left h4 span {
-        font-size: 21px;
-        line-height: 24px !important;
-    }
-
+ 
     .nmsfunneldoctor_formblock h3 {
         font-size: 23px;
         line-height: 26px;
@@ -377,37 +362,23 @@
         line-height: 32px;
     }
 
-
-    .btnleftinfo h2 {
-        font-size: 19px;
-        line-height: 23px;
-        width: 59%;
-        top: 40%;
-        left: 60%;
-    }
-
-    .nmsfunneldoctor_block2_left_content2 h2 {
-        font-size: 20px;
-    }
-}
-
-
-@media (max-width: 1460px){
+ 
 
 .nmsfunneldoctor_block2_left h3 { font-size: 30px; }
-.nmsfunneldoctor_block2_left h4 span { width: 67%; font-size: 26px; line-height: 36px!important; }
-.nmsfunneldoctor_block2_left_content2 h2 { font-size: 24px; }
+.nmsfunneldoctor_block2_left h4 span { line-height: 36px!important; }
+.nmsfunneldoctor_block2_left_content2 h2 { font-size: 24px;
+    line-height: 30px; }
+.landingleftimg1man { left: -10%; }
+
+
 }
+ 
 @media (max-width: 1420px){
 
     .landing_top2_div5_body {
         background-position: 110% top !important;
     }
-
-/*    .landing_top2_div2_body {
-        background-position: 450% bottom !important;
-
-    }*/
+ 
 
     .nmsfunneldoctor_block5_topright_inner_2 h2 {
         font-size: 36px;
@@ -415,15 +386,7 @@
     }
 }
 
-
-
-@media (max-width: 1415px) {
-    .btnleftinfo h2 {
-        font-size: 18px;
-        left: 62%;
-    }
-}
-
+ 
 @media (max-width: 1400px){
     .landingleftimg2computer {
         position: absolute;
@@ -431,7 +394,7 @@
         left: 56px;
         z-index: 99;
     }
-
+    .address_wrapper .form-group { margin-right: 0px; }
     .nmsfunneldoctor_block5_topright {
         width: 70%;
     }
@@ -446,15 +409,9 @@
 
 
     .nmsfunneldoctor_block2_left h3 {
-        font-size: 31px;
-        line-height: 30px;
-    }
-    /*   .pateintdetail_left_formnew_right .form-group2row{width: 46.9% !important;}*/
-
-   /* .landing_top2_div2_body {
-        background-position: 660% bottom !important;
-
-    }*/
+        font-size: 24px;
+    line-height: 30px;} 
+  
     .landing_top1_video_block {
         width: 100%;
         margin-top: 560px;
@@ -471,7 +428,11 @@
         line-height: 19px;
     }
     .nmsfunneldoctor_block2_left_content2 { max-width: 630px; }
-    .nmsfunneldoctor_block2_left h4 span { width: 630px;  font-size: 26px; line-height: 36px!important; }
+    .address_wrapper {display: flex; flex-wrap: wrap; }
+    .nmsfunneldoctor_formblock { padding-bottom: 0; }
+    .address_wrapper .form-group:last-child { margin-right: 0px; width: 100%; }
+    .landingleftimg1man { bottom: 148px; }
+    .nmsfunneldoctor_block2_left_content2 h2 { font-size: 24px; line-height: 34px; }
 }
 
 
@@ -497,12 +458,7 @@
         transform: translate(-10%, -50%);
         height: 63%;
     }
-
-    .btnleftinfo h2 {
-        font-size: 19px;
-        left: 62%;
-    }
-
+ 
     .nmsfunneldoctor_block6_right h2 {
         font-size: 40px;
         line-height: 41px;
@@ -557,9 +513,7 @@
         height: 60px;
         resize: none;
     }
-}
-
-@media (max-width: 1366px){
+ 
 
     .nmsfunneldoctor_block1 h2 {
         font-size: 28px;
@@ -625,10 +579,7 @@
         margin-top: 5px;
     }
 
-    /* .landingleftimg2computer {
-        left: 160px;
-        width: 390px;
-    } */
+ 
     .nmsfunneldoctor_formblock h3 {
         font-size: 21px;
         line-height: 26px;
@@ -645,24 +596,13 @@
         font-size: 26px;
         line-height: normal;
     }
-    .landingleftimg1man {
-        bottom: -28px;
-        left: -60px;
-        width: 350px;
-    }
+ 
     .nmsfunneldoctor_block2_left_content2 h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
-    /* .landingleftimg2computer {
-        left: 170px;
-        width: 420px;
-    } */
+    
     .btnleftinfo h2 {
-        font-size: 17px;
-        line-height: 20px;
-        width: 55%;
         top: 37%;
-        left: 60%;
     }
     .nmsfunneldoctor_formblock h2 {
         font-size: 16px;
@@ -672,24 +612,14 @@
         width: 100%;
         margin-top: 610px;
     }
-   /* .landing_top2_div2_body {
-        background-position:380px bottom !important;
-
-    }*/
-
-/*    .landing_video_arrow {
-        position: absolute;
-        left: -50px;
-        top: 70px;
-        width: 40px;
-    }*/
+    .nmsfunneldoctor_block2_left_content2 {
+        max-width: 570px;
+    }
 
 }
 
 @media (max-width: 1340px) {
-    .btnleftinfo h2 {
-        width: 56%;
-    }
+
     .nmsfunneldoctor_block5_topright_inner_2 h2 {
         font-size: 33px;
         line-height: normal;
@@ -702,10 +632,7 @@
 }
 
 @media (max-width: 1320px) {
-    .btnleftinfo h2 {
-        font-size: 16px;
-        width: 54%;
-    }
+     
     .nmsfunneldoctor_block3 h2 {
       padding: 0;
       margin: 0;
@@ -1096,10 +1023,13 @@
 
   .nmsfunneldoctor_block3_right { padding-right: 0px;  padding: 0; }
   .nmsfunneldoctor_s_1 .nms_s_containt_wrapper { background: #dadada; }
+  .nmsfunneldoctor_block2_innerwrapper { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-@media(max-width:1199px) {
     .nmsfunneldoctor_block2_left_top_content {
         padding-left: 36px;
     }
@@ -1167,7 +1097,7 @@
 
 
     .landingleftimg1man {
-        left: -15%;
+        left: 0;
         width: auto;
         margin: 0 auto;
         display: block;
@@ -1232,7 +1162,7 @@
         width: 100% !important;
         margin: 0;
         display: block;
-        padding: 0;
+        padding: 0; margin-top: 30px;
     }
     .nmsfunneldoctor_formblock h2 {
         font-size: 24px;
