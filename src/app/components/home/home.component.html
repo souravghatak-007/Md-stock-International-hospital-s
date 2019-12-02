@@ -1,0 +1,914 @@
+<span class="scroll-to-top" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+  <a (click)="scrollToTop()">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+</span>
+
+<div class="container-fluid nmsfunneldoctor_block1">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <h2> GLOBAL MEDICAL SALES MANAGEMENT GROUP LISTING AND SELLING MEDICAL SUPPLIES </h2>
+  </div>
+</div>
+
+<div class="container-fluid nmsfunneldoctor_block2">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row nmsfunneldoctor_block2_innerwrapper">
+      <div class="col-md-8 nmsfunneldoctor_block2_left">
+        <div class="nmsfunneldoctor_block2_left_top">
+          <div class="nmsfunneldoctor_block2_left_top_logo">
+            <img src="./assets/images/landinglogonew.png" alt="landinglogonew" class="landinglogonew" />
+          </div>
+          <div class="nmsfunneldoctor_block2_left_top_content">
+            <h2>
+              WE ARE THE PARTNER YOU WANT FOR SOURCING AND SELLING YOUR MEDICAL EQUIPMENT
+
+
+            </h2>
+          </div>
+        </div>
+        <h3>
+          <span class="spnabigtxt">attention!!</span> We are currently partnered with over 100 medical facilities.</h3>
+        <h4>
+          <span>DIRECT TO MANUFACTURER PURCHASES, HIGH QUALITY ON-DEMAND SUPPLIES. LIST
+            YOUR MEDICAL EQUIPMENT AND SELL IT THROUGH OUR GLOBAL PARTNER RELATIONSHIPS!
+          </span>
+        </h4>
+        <div class="nmsfunneldoctor_block2_left_content2">
+          <h2>
+            <!-- The Advanced Wellness Solutions ANS device and smart engagement form technology will transform your practice. There are other <span>devices on the market</span>, but none off them give you the incredible amount of <span>analytical data or the billing profile</span> support we offer!  Produce incredible results for your patients and a super bill that is pre-populated with your exact billing requirements to get reimbursed! -->
+
+
+            MD Stock International has the sound experience you can expect operating successfully in the space since
+            1999. We have championed supply and demand in the provision of medical, surgical supplies, laboratory
+            chemicals, laboratory consumables, diagnostic equipment, dental consumables, microbiology, clinical
+            chemistry, instruments, pharmaceuticals, and industrial products.
+          </h2>
+        </div>
+        <img src="./assets/images/landingleftimg1man.png" alt="landingleftimg1man" class="landingleftimg1man" />
+        <img src="./assets/images/landingleftimg2computer.png" alt="landingleftimg2computer"
+          class="landingleftimg2computer" />
+
+        <div class="btnleftinfo">
+          <h2>
+            <!-- <span>DRAMATICALLY</span> IMPROVE YOUR PATIENT OUTCOMES WHILE <span>INCREASING PRACTICE REVENUES</span> WITH OUR COMPLETE ANS SYSTEM. -->
+
+            WE HAVE <span> SET OUR REPUTATION </span>AS THE KEY SPECIALIST RESOURCE PARTNER TO <span>COMPANIES AND
+              TERRITORIES </span> GLOBALLY.
+
+          </h2>
+
+        </div>
+
+
+      </div>
+
+      <div class="col-md-4 nmsfunneldoctor_block2_right">
+        <div class="nmsfunneldoctor_formblock" id="nmsfunneldoctor_formblock">
+          <h2>Please send us an inquiry</h2>
+          <h3> We will get back to you right away!</h3>
+          <h1>
+            <!-- improve your patients’<br />
+            needs, satistfaction,<br />
+            & health quality <span>now!</span> -->
+            WE ARE YOUR SOURCING<br> AND LISTING EXPERTS.<br> <span>LET'S TALK!</span>
+          </h1>
+          <!-- <form>
+                        <div class="form-group">
+                            <div class="palceholder">
+                                <label for="fname">First name</label>
+                                <span class="star">*</span>
+                            </div>
+                            <input type="text" class="form-control" id="fname" required>
+                            <span class="bmd-help">error msg.</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="palceholder">
+                                <label for="lname">Last name</label>
+                                <span class="star">*</span>
+                            </div>
+                            <input type="text" class="form-control" id="lname" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="palceholder">
+                                <label for="email">Email</label>
+                                <span class="star">*</span>
+                            </div>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="palceholder">
+                                <label for="phone">Telephone number</label>
+                                <span class="star">*</span>
+                            </div>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="palceholder">
+                                <label for="city">City</label>
+                                <span class="star">*</span>
+                            </div>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="palceholder">
+                                <label for="state">State</label>
+                                <span class="star">*</span>
+                            </div>
+                            <input type="text" class="form-control" id="state" required>
+                        </div>
+                        <div class="btnsubmitwrapper">
+                            <button type="submit" class="btnsubmit">Submit</button>
+                            <img src="./assets/images/submiticon.png" class="submiticon">
+                        </div>
+                    </form> -->
+
+          <form [formGroup]="signUpform" (ngSubmit)="doSubmit(template)" autocomplete="off">
+            <div class="form-group">
+
+              <!-- Hospital name -->
+              <input class="form-control" placeholder="Hospital Name" type="text"
+                [formControl]="signUpform.controls['hospitalname']" (blur)="inputUntouch(signUpform, 'hospitalname')" />
+              <span *ngIf="
+                  signUpform.controls['hospitalname'].touched &&
+                  !signUpform.controls['hospitalname'].valid
+                " class="errortext">Hospital Name is required</span>
+            </div>
+
+            <!--Contact Person -->
+            <div class="form-group">
+              <input class="form-control" placeholder="Contact Person" type="text"
+                [formControl]="signUpform.controls['contactperson']"
+                (blur)="inputUntouch(signUpform, 'contactperson')" />
+              <span *ngIf="
+                  signUpform.controls['contactperson'].touched &&
+                  !signUpform.controls['contactperson'].valid
+                " class="errortext">Contact Person is required</span>
+            </div>
+
+            <!-- Primary Email-->
+            <div class="form-group">
+              <input class="form-control" placeholder="Primary Email" type="email"
+                [formControl]="signUpform.controls['email']" (blur)="inputUntouch(signUpform, 'email')" />
+              <span *ngIf="
+                  signUpform.controls['email'].touched &&
+                  !signUpform.controls['email'].valid
+                " class="errortext">Email Id is required</span>
+            </div>
+           
+            <!-- phone number multiple -->
+            <div class="form-group aditionalField">
+                <input class="form-control" [formControl]="signUpform.controls['contactphones']" placeholder="Contact Phone no's " (keyup)="collect_phones($event)" autocomplete="false">
+            <div *ngFor="let cpa of collect_phone_array;let i = index">
+                {{ cpa }}
+                <i (click)="clearPhones(i)">remove</i>
+            </div>
+            <span *ngIf="
+                  signUpform.controls['contactphones'].touched &&
+                  !signUpform.controls['contactphones'].valid
+                " class="errortext">Phone Number is required</span>
+          </div>
+            <!-- Password
+             -->
+            <div class="form-group">
+              <input class="form-control" placeholder="Password" type="password"
+                [formControl]="signUpform.controls['password']" (blur)="inputUntouch(signUpform, 'password')" autocomplete="false"/>
+              <span *ngIf="
+                  signUpform.controls['password'].touched &&
+                  !signUpform.controls['password'].valid
+                " class="errortext">Password is required</span>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" placeholder="Confirm Password" type="password"
+                [formControl]="signUpform.controls['confirmpassword']"
+                (blur)="inputUntouch(signUpform, 'confirmpassword')" />
+              <span *ngIf="signUpform.controls['confirmpassword'].touched && !signUpform.controls['confirmpassword'].valid" class="errortext">Confirm Password is required</span>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" placeholder="Address" type="text"
+                [formControl]="signUpform.controls['address']" (blur)="inputUntouch(signUpform, 'address')" />
+              <span *ngIf="
+                  signUpform.controls['address'].touched &&
+                  !signUpform.controls['address'].valid
+                " class="errortext">Address is required</span>
+            </div>
+
+             <div class="form-group">
+              <select class="form-control" placeholder="Select State" type="text"
+                [formControl]="signUpform.controls['state']" (blur)="inputUntouch(signUpform, 'state')">
+                <option value="">Select State</option>
+                <option *ngFor="let item of stateslist" value="{{ item.abbreviation }}">{{ item.name }}</option>
+              </select>
+              <span *ngIf="
+                  signUpform.controls['state'].touched &&
+                  !signUpform.controls['state'].valid
+                " class="errortext">State is required</span>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control" placeholder="Select City" type="text"
+                [formControl]="signUpform.controls['city']" (blur)="inputUntouch(signUpform, 'city')">
+                <option value="">Select City</option>
+                <option *ngFor="let item of citylist" value="{{ item.city }}">{{ item.city }}</option>
+              </select>
+              <span *ngIf="
+                  signUpform.controls['city'].touched &&
+                  !signUpform.controls['city'].valid
+                " class="errortext">City is required</span>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" placeholder="Zip" type="text" [formControl]="signUpform.controls['zip']"
+                  (blur)="inputUntouch(signUpform, 'zip')" />
+                <span *ngIf="
+                    signUpform.controls['zip'].touched &&
+                    !signUpform.controls['zip'].valid
+                  " class="errortext">Zip is required</span>
+              </div>
+
+              <div class="form-group">
+                  <input class="form-control" placeholder="Specialty" type="text"
+                    [formControl]="signUpform.controls['speciality']" (blur)="inputUntouch(signUpform, 'speciality')" />
+                  <span *ngIf="
+                      signUpform.controls['speciality'].touched &&
+                      !signUpform.controls['speciality'].valid
+                    " class="errortext">Specialty is required</span>
+                </div>
+
+            <!-- check box for status -->
+            <!-- <div class="form-group">
+                <input type="checkbox" [formControl]="signUpform.controls['status']">Active
+            </div> -->
+
+             <!-- Medical Parner's Image  -->
+             <!-- <div class="form-group">
+              <h1>Medical Parner's Image</h1>*Just add a single image
+             <lib-file-upload [config]="configData"></lib-file-upload>
+             <span *ngIf="ErrCode==true">Please add just one service image.</span>
+             </div> -->
+            
+            <div class="form-group">
+              <div class="btnsubmitwrapper">
+                <button type="submit" class="btnsubmit" data-toggle="modal">
+                  Submit
+                </button>
+                <img src="./assets/images/submiticon.png" class="submiticon" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="inner_para">
+  <p>The Mission of MD Stock International for our domestic and International partners is to become the key specialist
+    resource partner to companies and territories for the provision of medical and laboratory equipment, supplies,
+    pharmaceuticals, chemicals and consumables world wide.
+  </p>
+</div>
+<div class="container-fluid nmsfunneldoctor_block3">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row nmsfunneldoctor_block3_innerwrapper">
+      <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block3_left">
+        <!-- <h2>Watch This Video!</h2>
+        <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YfzmwjKFzHA?rel=0&hd=1" frameallow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        <!---->
+        <!-- <img width="560" height="315" src="./assets/images/suvideowrapperdivnew.jpg" > -->
+        <!-- <video width="400" controls="" controlslist="nodownload" style="border: solid 5px #000;">
+            <source src="http://crmfiles.influxhostserver.s3-website.us-east-2.amazonaws.com/How%20To%20Use%20The%20NMS-100_5-17-17.mp4" type="video/mp4" />
+          </video> -->
+
+        <img src="assets/images/hospital image.jpg">
+
+
+        <!-- </div> -->
+      </div>
+      <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block3_right">
+        <h2> MD STOCK INTERNATIONAL HAS SEVERAL KEY CLIENTS THAT WE SOURCE FROM AND WORK DIRECTLY WITH. WE BUILD STRONG
+          MUTUALLY BENEFICIAL RELATIONSHIPS AND WANT TO ADD YOU TO OUR LIST! </h2>
+        <ul>
+          <li>Missions Pharmaceuticals</li>
+          <li>CARIRI</li>
+          <li>University Of The West Indies</li>
+          <li>Antigua General Hospital</li>
+          <li>VH Marketing Limited </li>
+          <li>K.D. Enterprise</li>
+          <li>St Jude’s Hospital, St Lucia</li>
+          <li>International Pharmaceutical Agency, Guyana</li>
+          <li>Makro-Medic LLC</li>
+          <li>Bermuda Hospitals Board</li>
+          <li>Matrix Distributors</li>
+          <li>ITX Medical Supply</li>
+          <li>MJL Positive Meds (Aruba)</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid nmsfunneldoctor_block9 videos">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 videolist">
+          <h2>Patient Encounter Compilation & Execution</h2>
+          <div class="videoWrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xCbfRgR__ho?rel=0&hd=1" frameallow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 videolist">
+          <h2>Super Bill "Smart" Encounter Form Billing Profile</h2>
+          <div class="videoWrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/uLsQlL-0YLE?rel=0&hd=1" frameallow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid nmsfunneldoctor_block8">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <h2>Testing for 8 Essential Risk Factors</h2>
+    <ol>
+      <li class="libase li1">
+        <div class="listwarppercls">
+            <h4>Autonomic Nervous System Dysfunction</h4>
+            <span class="imgwrapperblock8">
+              <img src="./assets/images/block8featureimg1.jpg" class="imgblock8cls">
+            </span>
+        </div>
+
+      </li>
+      <li class="libase li2">
+          <div class="listwarppercls">
+              <h4>Insulin Resistance</h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg2.jpg" class="imgblock8cls">
+              </span>
+          </div>
+      </li>
+      <li class="libase li3">
+          <div class="listwarppercls">
+              <h4>Endothelial Dysfunction.</h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg3.jpg" class="imgblock8cls">
+              </span>
+          </div>
+      </li>
+      <li class="libase li4">
+          <div class="listwarppercls">
+              <h4>Sudomotor Dysfunction</h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg4.jpg" class="imgblock8cls">
+              </span>
+          </div>
+      </li>
+      <li class="libase li5">
+          <div class="listwarppercls">
+              <h4>Cardiac Autonomic Neuropathy</h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg5.jpg" class="imgblock8cls">
+              </span>
+          </div>
+      </li>
+      <li class="libase li6">
+          <div class="listwarppercls">
+              <h4>Cardio- Metabolic Risk</h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg6.jpg" class="imgblock8cls">
+              </span>
+          </div>
+      </li>
+      <li class="libase li7">
+          <div class="listwarppercls">
+              <h4>Small Fibre Neuropathy</h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg7.jpg" class="imgblock8cls">
+              </span>
+        </div>
+      </li>
+      <li class="libase li8">
+          <div class="listwarppercls">
+              <h4>Cardio-vascular Disease </h4>
+              <span class="imgwrapperblock8">
+                <img src="./assets/images/block8featureimg8.jpg" class="imgblock8cls">
+              </span>
+          </div>
+      </li>
+
+
+
+
+    </ol>
+
+  </div>
+</div> -->
+
+<div class="container-fluid nmsfunneldoctor_s_1">
+  <div class="nms_s_containt_wrapper">
+    <div class="custom_container">
+      <div class="header_part">
+        <h1> MD Stock International is the agent for and has partnerships With the following companies: </h1>
+      </div>
+
+
+      <div class="content_section">
+
+        <!-- <div class="items">
+          <div class="icons">
+            <h3>1</h3>
+          </div>
+          <h1>United Hospital Supply Corporation</h1>
+          <p> Design & Fabrication of Pharmacy & Laboratory Furniture</p>
+        </div> -->
+        <div class="items" *ngFor="let item of partnerList">
+          <div class="icons">
+            <h3>2</h3>
+          </div>
+          <h1>{{item.name}}</h1>
+          <!-- <p> Worldwide Producer of Laboratory, Biotechnology and Pharmaceuticals, Specialty Industrial and
+            Microelectronic Chemicals </p> -->
+          <p>{{item.details}}</p>
+          <button class="view_more" (click)="showDetails(item, showtemplate)">View More</button>
+        </div>
+        <!-- <div class="items">
+          <div class="icons">
+            <h3>3</h3>
+          </div>
+          <h1>Kimble / Kontes</h1>
+          <p> World Class Laboratory Glassware (Reusable, Disposable and Specialty Glassware)</p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>4</h3>
+          </div>
+          <h1>Advanced Instrumentations Inc</h1>
+          <p>First Class Medical Equipment </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>5</h3>
+          </div>
+          <h1>Adam Equipment</h1>
+          <p> Suppliers of Balances, Scales and Weighing Equipment for Laboratory Medical and Industrial Use </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>6</h3>
+          </div>
+          <h1>A J Cope & Sons Ltd</h1>
+          <p> Suppliers of Labware, Laboratory Products, Laboratory Consumables and Scientific Equipment </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>7</h3>
+          </div>
+          <h1>Pride Corporation</h1>
+          <p> Over-the-counter Drugs and General Merchandize</p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>8</h3>
+          </div>
+          <h1>Genetics Pharmaceuticals</h1>
+          <p>Manufacturers of Pharmaceuticals </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>9</h3>
+          </div>
+          <h1>Dynarex Corp</h1>
+          <p> Manufacturers and Distributors of Disposable Medical Supplies</p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>10</h3>
+          </div>
+          <h1>Macs Pharmaceuticals and Cosmetics</h1>
+          <p> Manufacturers of Pharmaceutical and Cosmetic Supplies </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>12</h3>
+          </div>
+          <h1>Harvard Drug Group</h1>
+          <p> Manufacturers of Pharmaceuticals </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>13</h3>
+          </div>
+          <h1>American Diagnostics Corporation</h1>
+          <p> Supplier of Stethoscopes and Blood Pressure Instruments </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>14</h3>
+          </div>
+          <h1>Pharmasupply </h1>
+          <p> Manufacturers of Glucose Meters and Blood Pressures Instruments </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>15</h3>
+          </div>
+          <h1>MD Science</h1>
+          <p> Manufacturers of Multivitamins </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>16</h3>
+          </div>
+          <h1>Bio Nuclear Diagnostic</h1>
+          <p> Manufacturer and Distributor of Medical, Diagnostic and Laboratory Supplies </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>17</h3>
+          </div>
+          <h1>Nalgene </h1>
+          <p> Manufacturer and Distributor of durable, break-resistant, light weight Labware (Beakers, Bottles, Glass
+            Carboys, filters …) </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>18</h3>
+          </div>
+          <h1>Ansell </h1>
+          <p> Global Leader in Healthcare Barrier Protection Products (Condoms, Gloves, Aprons …) </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>19</h3>
+          </div>
+          <h1>Hach </h1>
+          <p>Global Company in Water Quality Testing and Analysis, Offers Portable Laboratory and Online
+            Instrumentation. Manufacturer and Distributor of Reagents used to Test Water Quality and Other Aqueous
+            Solutions
+          </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>20</h3>
+          </div>
+          <h1>Labconco </h1>
+          <p> Provides Laboratory Equipment including Chemical Fume Hoods, HEPA Filtered Safety Cabinets, Carbon
+            Filtered and Laboratory Animal Enclosures – Glassware Washers, Carts and Benches & Water Purification System
+          </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>21</h3>
+          </div>
+          <h1>Lab Safety Supplies (LSS)</h1>
+          <p> Distributor of a Variety of Safety Products, Material Handling, Industrial and Laboratory Supplies </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>22</h3>
+          </div>
+          <h1>Ben Meadows</h1>
+          <p> Distributor of Forestry Supplies, Surveying Equipment, GPS Navigation etc. </p>
+
+          <button class="view_more">View More</button>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>23</h3>
+          </div>
+          <h1>ThermoFisher Scientific </h1>
+          <p> Fisher Scientific - Complete Portfolio of Laboratory Equipment, Chemicals, Supplies and Services for
+            Research, Safety, Healthcare and Science Education </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>24</h3>
+          </div>
+          <h1>VWR International </h1>
+          <p> Manufacturer and Distributor of Laboratory Necessities, Chemicals, Furniture, Lifer Science, Bioscience,
+            Safety Chromatography, Controlled Environment & Clinical Healthcare</p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>25</h3>
+          </div>
+          <h1>Cole Parmer</h1>
+          <p> A Leading Global Source of Laboratory and Industrial Fluid Handling Products, Instrumentation, Equipment
+            and Supplies. Proven Experts in the Fields of Temperature Measurement and Control, Electrochemistry, and
+            Fluid Handling </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>26</h3>
+          </div>
+          <h1>Phillips Avent</h1>
+          <p> Manufacturers of a Full Range of Baby Products </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>27</h3>
+          </div>
+          <h1>Genthics Pharmaceuticals</h1>
+          <p> Manufactures Over-the-counter Drugs and Prescription drugs </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>28</h3>
+          </div>
+          <h1>Nipro Diagnostic</h1>
+          <p> (Formerly Home Diagnostic Ltd)- Manufacturers of Glucometers and Diabetic Care Products </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>29</h3>
+          </div>
+          <h1>Invacare- </h1>
+          <p> Manufacturers and Distributors of Medical Supplies, Instruments and Equipment</p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>30</h3>
+          </div>
+          <h1>Welch Allyn</h1>
+          <p>Manufacturers of Diagnostics, Equipments and Instruments </p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>31</h3>
+          </div>
+          <h1>Hi Media</h1>
+          <p>Manufacturers of Microbiology Laboratory Products </p>
+        </div>
+
+        <div class="items">
+          <div class="icons">
+            <h3>32</h3>
+          </div>
+          <h1>Polyscience- </h1>
+          <p>Manufacturers of Chillers and Circulators</p>
+        </div>
+        <div class="items">
+          <div class="icons">
+            <h3>33</h3>
+          </div>
+          <h1>Harvard Drug Group</h1>
+          <p>Manufacturers and Distributors of a Comprehensive Range of Pharmaceuticals Including Over-the-counter
+            Drugs, Prescription Drugs, Dermatology and Ophthalmology</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container-fluid nmsfunneldoctor_block4">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="nmsfunneldoctor_block4_content_wrapper">
+      <div class="nmsfunneldoctor_block4_content">
+        <div class="ImgWrapper">
+          <img width="560" height="315" src="./assets/images/nmsfunneldoctorblock4img1.jpg" />
+        </div>
+      </div>
+      <div class="nmsfunneldoctor_block4_content">
+        <div class="ImgWrapper">
+          <img width="560" height="315" src="./assets/images/nmsfunneldoctorblock4img2.jpg" />
+        </div>
+      </div>
+      <div class="nmsfunneldoctor_block4_content">
+        <div class="ImgWrapper">
+          <img width="560" height="315" src="./assets/images/nmsfunneldoctorblock4img3.jpg" />
+        </div>
+      </div>
+      <div class="nmsfunneldoctor_block4_content">
+        <div class="ImgWrapper">
+          <img width="560" height="315" src="./assets/images/nmsfunneldoctorblock4img4.jpg" />
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btngetinfonow">
+      <span>Get info now!</span>
+    </button>
+  </div>
+</div> -->
+
+<!-- <div class="container-fluid nmsfunneldoctor_block5">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row nmsfunneldoctor_block5_content_wrapper">
+      <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block5_content_left">
+        <div class="nmsfunneldoctor_block5_top">
+          <div class="nmsfunneldoctor_block5_imgwrapper">
+            <img src="./assets/images/nmsfunneldoctorblock5img2.png" />
+          </div>
+          <div class="nmsfunneldoctor_block5_topright">
+            <div class="nmsfunneldoctor_block5_topright_inner_2">
+              <h2>dr tinsley, M.D., FACs</h2>
+            </div>
+            <h3>
+                <strong>Vascular Surgeon –</strong> <br><span>specializing in</span> Endovascular
+                <span>and</span> Open Vascular Surgery
+              </h3>
+          </div>
+        </div>
+        <p>
+          “I can tell you that every patient with a BMI over 25 would benefit
+          from evaluation with the
+          <span>NMS-100</span>. The early identification of abnormal biomarkers
+          for <span>CAD, PAD,</span> diabetes and hypertension should allow you
+          to measure, motivate and monitor your specific patient population,
+          leading to improved health in your community through the personalized
+          wellness programs.”
+        </p>
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block5_content_right">
+        <img src="./assets/images/nmsfunneldoctorblock5img1.png" alt="nmsfunneldoctorblock5img1"
+          class="nmsfunneldoctorblock5img1" />
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container-fluid nmsfunneldoctor_block5">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row nmsfunneldoctor_block5_content_wrapper">
+      <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block5_content_left">
+        <div class="nmsfunneldoctor_block5_topright_inner_2">
+          <h2>Physician Taxonomies that will qualify for our system:</h2>
+        </div>
+        <ul>
+          <li>Family Medicine</li>
+          <li>General Practice</li>
+          <li>Primary Care</li>
+          <li>Cardiology</li>
+          <li>Internal Medicine</li>
+          <li>Endocrinology</li>
+          <li>D.O. (Doctor of Osteopathy)</li>
+          <li>Pain Management (Integrated Practice)</li>
+          <li>OB-GYN</li>
+          <li>Multi-Specialty Group</li>
+          <li>Orthopedic Surgeon (that provides long-term patient care)</li>
+          <li>Pain Management Group with MD of proper taxonomy</li>
+        </ul>
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block5_content_right">
+        <img src="./assets/images/nmsfunneldoctorblock5img1.png" alt="nmsfunneldoctorblock5img1"
+          class="nmsfunneldoctorblock5img1" />
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- We want to partner with you Section -->
+
+
+
+<div class="container-fluid partner_section">
+  <div class="background_wrapper">
+    <h2 class="section_header"> We want to partner with you </h2>
+    <p>There is a lot of value to be experienced in a solid partnership, working directly with MD Stock International.
+      As an organization, we are able to take your medical equipment that you are replacing, and quickly list and sell
+      it for you. We have partnerships all over the country and around the world. We are also able to offer current
+      stock that we hold in our warehouse, and direct to manufacture pricing for any need you may have as a medical
+      facility.</p>
+
+
+
+    <div class="offer_section">
+
+      <h3>
+        Medical Supplies<br>
+        Consultancy Service for Medical Institutions
+
+      </h3>
+
+
+      <div class="inside_section">
+        <div class="items_section">
+          <h4>We offer sales support in : </h4>
+
+          <ul>
+            <li>Lab Design and Furnishing</li>
+            <li>Laboratory Supplies, Chemicals and Equipment</li>
+            <li>Pharmaceutical Products</li>
+            <li>Clinical Lab Instruments </li>
+            <li>Diagnostic Kits and Controls</li>
+            <li>Personal Protection Equipment </li>
+            <li>Organic and Custom Synthesis Products</li>
+            <li>Cell Culture Supplies, Protein Assay Kits and Reagents</li>
+            <li>Field Service, Technical Services, Procurement Solutions </li>
+          </ul>
+
+        </div>
+        <div class="items_section">
+          <h4>What we offer before, during and after the sale:</h4>
+
+          <ul>
+            <li>In-house services including warranty and field repair services, check up, and installation calibration.
+            </li>
+            <li>On-site services including warranty and field repair work, start up, and installation services and
+              preventative maintenance plans.
+            </li>
+            <li>Custom programs to meet your unique requirements.</li>
+            <li>Rental and lease programs.</li>
+            <li>For consumables and supplies that we have ex-stock, we deliver in twenty four (24) hours.</li>
+            <li>Consultancy programs for laboratory designs and equipment.</li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container-fluid nmsfunneldoctor_block6">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row nmsfunneldoctor_block6_content_wrapper">
+      <div class="col-md-4 col-sm-12 col-xs-12 nmsfunneldoctor_block6_left">
+        <img src="./assets/images/nmsfunneldoctorblock6img1.jpg" alt="nmsfunneldoctorblock6img1"
+          class="nmsfunneldoctorblock6img1" />
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-12 nmsfunneldoctor_block6_right">
+        <h2>
+          <span>Get in touch with us right away!
+          </span> We look forward to building a business relationship with your organization and contributing to your
+          personal and commercial success.
+
+        </h2>
+        <a mat-button class="btngetinfonow" href="javascript:void(0)" (click)="toTop()"><span>Get info now!</span></a>
+        <!-- <button type="button" class="btngetinfonow" href="javascript:void(0)" (click)="toTop()">
+          <span></span>
+        </button> -->
+        <img src="./assets/images/nmsfunneldoctorblock6img2.png" alt="nmsfunneldoctorblock6img2"
+          class="nmsfunneldoctorblock6img2" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid nmsfunneldoctor_block7">
+  <div class="nmsfunneldoctor_block_wrapper">
+    <div class="row nmsfunneldoctor_block7_content_wrapper">
+      <div class="col-md-12 col-sm-12 col-xs-12 nmsfunneldoctor_block7_copyright">
+        <p>
+          <span><a href="javascript:void(0);">Privacy Policy</a> |
+            <a href="javascript:void(0);">Terms & Conditions</a></span>
+        </p>
+        <p>© Copyright 2018 MD Stock International - All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<ng-template #template>
+  <div class="modal-body text-center">
+    <button type="button" class="close" (click)="closep()">&times;</button>
+    <img alt="#" class="modallogo" src="./assets/images/landinglogonew.png" />
+    <p>
+      <!-- One of our consultants will get with you to schedule a 15 minute call right away! -->
+      Thank you for the inquiry We will get back to you soon!
+    </p>
+  </div>
+</ng-template>
+
+<ng-template #imagetemplate>
+  <div class="modal-body text-center">
+    <button type="button" class="close" (click)="closep()">&times;</button>
+
+    <img *ngIf="imgval!=null" [src]="imgval">
+  </div>
+</ng-template>
+
+<ng-template #showtemplate>
+  <div class="modal-body text-center">
+    <button type="button" class="close" (click)="closep()">&times;</button>
+
+    <div class="inner_data" *ngIf="data != ''">
+      <h1>{{data.name}}</h1>
+      <p>{{data.details}}</p>
+    </div>
+  </div>
+</ng-template>
