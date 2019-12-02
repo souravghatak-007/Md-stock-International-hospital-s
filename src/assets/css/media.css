@@ -76,6 +76,9 @@
 }
 
 
+@media (max-width: 1660px) {
+    .nmsfunneldoctor_block2_left_content2 h2 { margin-left: 30px; }
+}
 @media (max-width: 1640px) {
     .nmsfunneldoctor_block2_left_top_content h2 {
         font-size: 26px;
@@ -84,6 +87,12 @@
 
 
 
+@media (max-width: 1620px) {
+    .nmsfunneldoctor_block2_left_content2 h2 { margin-left: 5px; line-height: 40px; }
+    .landingleftimg1man { left: -120px; }
+    .nmsfunneldoctor_block2_left h4 span { width: 85%; }
+    .nmsfunneldoctor_formblock { padding-bottom: 0; }
+}
 @media (max-width: 1600px) {
   .nms_s_containt_wrapper .custom_container {
     width: 63%;
@@ -113,10 +122,8 @@
         bottom: 16px;
         padding: 18px 24px;
     }
-    .btngetinfonow span {
-        font-size: 24px;
-        line-height: normal;
-    }
+    .btngetinfonow span { font-size: 24px; line-height: normal; }
+    .nmsfunneldoctor_block2_left_content2 h2 { line-height: 33px; }
 }
 
 
@@ -154,6 +161,7 @@
         border: 2px solid #555555;
         outline: 1px solid #555555;
     }
+    .landingleftimg1man {  bottom: 138px; }
 }
 
 
@@ -170,11 +178,10 @@
     }
     .nmsfunneldoctor_block2_left_content2 {
         max-width: 720px;
-    }
-    .nmsfunneldoctor_block2_left h4 span { width: 68%; }
+    } 
 
     .nmsfunneldoctor_block2_left_content2 h2 {
-        font-size: 23px;
+        font-size: 26px;
     }
     .landingleftimg2computer {
         position: absolute;
@@ -186,16 +193,18 @@
     .nmsfunneldoctor_block6_right h2 {
         font-size: 42px;
         line-height: 44px;
-    }
-
-}
-
-
-@media (max-width: 1540px){
+    } 
+ 
   .nmsfunneldoctor_s_1 {
     background-position: 66% center;
     background-size: cover;
 }
+}
+@media (max-width: 1510px){
+    .nmsfunneldoctor_block2_left h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
 }
 @media (max-width: 1500px){
   .nmsfunneldoctor_block2_left h3 { font-size: 30px; }
@@ -366,8 +375,7 @@
 
 .nmsfunneldoctor_block2_left h3 { font-size: 30px; }
 .nmsfunneldoctor_block2_left h4 span { line-height: 36px!important; }
-.nmsfunneldoctor_block2_left_content2 h2 { font-size: 24px;
-    line-height: 30px; }
+.nmsfunneldoctor_block2_left_content2 h2 { line-height: 30px; }
 .landingleftimg1man { left: -10%; }
 
 
@@ -388,12 +396,8 @@
 
  
 @media (max-width: 1400px){
-    .landingleftimg2computer {
-        position: absolute;
-        bottom: 96px;
-        left: 56px;
-        z-index: 99;
-    }
+    .nmsfunneldoctor_block2_left h4 span { width: 100%; font-size: 26px; }
+.landingleftimg2computer { position: absolute; bottom: 96px; left: 56px; z-index: 9;}
     .address_wrapper .form-group { margin-right: 0px; }
     .nmsfunneldoctor_block5_topright {
         width: 70%;
@@ -432,7 +436,7 @@
     .nmsfunneldoctor_formblock { padding-bottom: 0; }
     .address_wrapper .form-group:last-child { margin-right: 0px; width: 100%; }
     .landingleftimg1man { bottom: 148px; }
-    .nmsfunneldoctor_block2_left_content2 h2 { font-size: 24px; line-height: 34px; }
+    .nmsfunneldoctor_block2_left_content2 h2 { font-size: 25px; line-height: 34px; margin-top: 20px; }
 }
 
 
@@ -629,6 +633,7 @@
     .nms_s_containt_wrapper .custom_container .header_part h1 { font-size: 30px;  }
     .nms_s_containt_wrapper .custom_container .content_section .items h1 { font-size: 18px; }
     .nms_s_containt_wrapper .custom_container .header_part h1 { margin-bottom: 15px; }
+    .nmsfunneldoctor_formblock h1 { font-size: 20px; line-height: 30px; }
 }
 
 @media (max-width: 1320px) {
@@ -645,11 +650,13 @@
 @media (max-width: 1300px){
     .landingleftimg1man {
         left: -70px;
-        width: 345px;
+        width: 385px;
     }
     .nmsfunneldoctor_block2_left_content2 h2 {
-        font-size: 22px;
+        font-size: 24px;
+        line-height: 35px;
     }
+    
 
     .nmsfunneldoctor_formblock h3 {
         font-size: 20px;
@@ -664,12 +671,7 @@
     .nmsfunneldoctor_block2_left_top_content h2 {
         font-size: 21px;
     }
-
-    /* .landingleftimg2computer {
-        left: 196px;
-        width: 360px;
-    } */
-
+ 
     .nmsfunneldoctor_block6_right h2 {
         font-size: 34px;
         line-height: 40px;
@@ -703,35 +705,12 @@
     }
 
     .landing_top2_div2_wrapper_video_com h1{ padding-bottom: 18px;}
-
-    /*.landing_video_arrow {
-        position: absolute;
-        left: -25px;
-        top: 76px;
-        width: 23px;
-    }
-*/
-    /*.landing_top2_div2_body {
-        background-position:280px bottom !important;
-
-    }*/
+ 
 
     .landing_top2_div5_body {
         background-position: 130% top !important;
     }
-
-   /* .landing_top1_wrapper {
-        width: 1200px;
-    }
-
-    .landing_top1_left {
-        width: 678px;
-        float: left;
-    }
-
-    .landing_top1_right {
-        width: 429px;
-    }*/
+ 
 
     .landing_top1_formbod h2 {
         font-size: 32px;
@@ -759,17 +738,7 @@
         font-size: 24px;
         line-height: 32px;
     }
-
-   /* .landing_top1_left_textcon {
-        width: 660px;
-        margin-top: 500px;
-    }*/
-
-   /* .landing_top1_left_textcon_text {
-        width: 436px;
-        float: right;
-    }*/
-
+ 
     .landing_top1_left_textcon_text h3 {
         font-size: 19px;
     }
@@ -777,8 +746,7 @@
         font-size: 19px;
     }
 
-    .nmsfunneldoctor_block2_left_content2 { max-width: 600px; }
-  .nmsfunneldoctor_block2_left h4 span { width: 605px; }
+    .nmsfunneldoctor_block2_left_content2 { max-width: 600px; } 
 }
 
 @media(max-width:1290px) {
@@ -819,52 +787,15 @@
         line-height: normal;
     }
 
-    .nmsfunneldoctor_block5_topright_inner_2 h3 {
-        font-size: 15px;
-        line-height: 19px;
-    }
-
-    .nmsfunneldoctor_block3 ul li {
-        font-size: 18px;
-        line-height: 18px;
-    }
-
-
-    .nmsfunneldoctor_block3 ul li {
-        margin-top: 1px;
-    }
-
-    .btnleftinfo h2 {
-        font-size: 17px;
-        line-height: 18px;
-        width: 58%;
-        top: 35%;
-        left: 62%;
-    }
-    .submiticon {
-        position: absolute;
-        top: 37%;
-        right: 0;
-        transform: translate(-8%, -50%);
-        height: 62%;
-    }
-
-    .nmsfunneldoctor_formblock .btnsubmit, .nmsfunneldoctor_formblock .btnsubmit:hover {
-        font-size: 32px;
-    }
-
-    .nmsfunneldoctor_block2_left_top_content h2 {
-        font-size: 22px;
-    }
-
-    /* .landingleftimg2computer {
-        left: 154px;
-        width: 360px;
-        bottom: 75px;
-    } */
-
-.nmsfunneldoctor_block2_left h4 span { width: 565px; font-size: 22px; }
+.nmsfunneldoctor_block5_topright_inner_2 h3 { font-size: 15px; line-height: 19px; }
+.nmsfunneldoctor_block3 ul li { font-size: 18px; line-height: 18px; }
+.nmsfunneldoctor_block3 ul li { margin-top: 1px; }
+.submiticon { position: absolute; top: 37%; right: 0; transform: translate(-8%, -50%); height: 62%; }
+.nmsfunneldoctor_formblock .btnsubmit, .nmsfunneldoctor_formblock .btnsubmit:hover { font-size: 32px; }
+.nmsfunneldoctor_block2_left_top_content h2 { font-size: 22px; }      
+.nmsfunneldoctor_block2_left h4 span {  font-size: 24px; }
 .nmsfunneldoctor_block2_left_content2 { max-width: 565px;}
+.nmsfunneldoctor_block2_left_content2 h2 { font-size: 22px; margin-left: 18px; }
 }
 
 
@@ -898,21 +829,9 @@
         font-size: 30px !important;
         line-height: 34px!important;
     }
-    .nmsfunneldoctor_block2_left h4 span {
-        font-size: 18px;
-        line-height: 26px !important;
-    }
-
-    /* .landingleftimg2computer {
-        left: 127px;
-        width: 405px;
-    } */
-    .btnleftinfo h2 {
-        font-size: 16px;
-        line-height: 18px;
-        width: 57%;
-        top: 35%;
-        left: 60%;
+   
+    .btnleftinfo h2 {    
+        top: 34%; font-size: 20px;
     }
     .nmsfunneldoctor_formblock h2 {
         font-size: 14px;
@@ -922,10 +841,7 @@
         font-size: 18px;
         line-height: 20px;
     }
-    .nmsfunneldoctor_formblock h1 {
-        font-size: 21px;
-        line-height: 33px;
-    }
+    .nmsfunneldoctor_formblock h1 {  font-size: 18px;  line-height: 24px; }
 
 
     .landing_top1_left_textcon_text {
@@ -957,7 +873,7 @@
         font-size: 18px;
     }
     .nmsfunneldoctor_block2_left h3 { font-size: 24px; }
-
+    .nmsfunneldoctor_block2_left_content2 h2 { font-size: 21px; margin-left: 32px; line-height: 33px; }
 }
 
 @media(max-width:1220px) {
@@ -968,11 +884,8 @@
         z-index: 99;
         width: 502px;
     }
-    .nmsfunneldoctor_formblock h1 {
-        font-size: 20px;
-        line-height: 32px;
-    }
-    .nmsfunneldoctor_block2_left h4 span { width: 550px; }
+ 
+     
     .nmsfunneldoctor_block2_left_content2 { max-width: 550px; }
 }
 
