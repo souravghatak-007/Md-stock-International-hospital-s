@@ -13,7 +13,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { RepSignupComponent } from './components/rep-signup/rep-signup.component';
 import {ApiService} from './api-service';
-import { FileUploadModule } from 'file-upload';
+// import { FileUploadModule } from 'file-upload';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { FileUploadModule } from 'file-upload';
     FormsModule,
     ModalModule.forRoot(),
     HttpClientModule,
-    FileUploadModule
+    // FileUploadModule
     // CookieService
   ],
   providers: [CookieService,ApiService],
