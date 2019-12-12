@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   public citylist:any;
   public ready: any;
   public imgval: any;
+  public countryList: any = [];
   public imagemodal: any = 1;
   public ErrCode:boolean;
   public collect_phone_array:any=[];
@@ -44,13 +45,14 @@ export class HomeComponent implements OnInit {
       contactperson: ['', Validators.required],
       email:['', [Validators.required, Validators.pattern(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/)]],
       password: ['',Validators.required],
-      contactphones:['',Validators.required],
+      contactphones:[],
       confirmpassword:['',Validators.required],
       address: ['', Validators.required],
       city: ['',Validators.required],
       state: ['', Validators.required],
       speciality:['',Validators.required],
       zip:['',Validators.required],
+      country:['',Validators.required],
       salesrepselect: this.activatedroute.snapshot.params.repid,
       type: ['hospital'],
       status:0, 
@@ -70,7 +72,7 @@ export class HomeComponent implements OnInit {
   }
   //collecting mass phones
   collect_phones(event: any) {
-    if (event.keyCode == 13) {
+    if (event.keyCode == 32) {
       this.collect_phone_array.push(event.target.value);
       this.signUpform.controls['contactphones'].patchValue("");
       return;
@@ -136,6 +138,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
+
+     //country list
+     let data: any = {
+      "source": 'country',
+      "token": this.cookieservice.get('jwtToken')
+    };
+    this.apiService.postData('datalist', data).subscribe((res:any) => {
+    
+      //console.log(res.res);
+       this.countryList = res.res;
+     
+    })
+
     this.router.events.subscribe(() =>
       window.scrollTo({
         top: 0,
@@ -218,8 +234,6 @@ machpassword(passwordkye: string, confirmpasswordkye: string) {
     // }
 
     // console.log(this.ErrCode);
-    // console.log(this.signUpform.value);
-
     for (let i in this.signUpform.controls) {
       this.signUpform.controls[i].markAsTouched();
     }
@@ -229,11 +243,13 @@ machpassword(passwordkye: string, confirmpasswordkye: string) {
       if(this.signUpform.value.confirmpassword != null){
         delete this.signUpform.value.confirmpassword;
       }
-      
+      this.signUpform.value.contactphones = this.collect_phone_array;
+
+     // console.log(this.signUpform.value);
       let data: any = {
         "source": "users",
         "data": this.signUpform.value,
-        "sourceobj": ["salesrepselect"],
+        "sourceobj": ["salesrepselect","country"],
       };
       //console.log(this.cookieservice.get('jwttoken'));
       // this.successmodal = true;
@@ -241,7 +257,7 @@ machpassword(passwordkye: string, confirmpasswordkye: string) {
 
           let result: any = {};
           result = res;
-          console.log(result);
+          //console.log(result);
           if (result.status == 'success') {
 
             this.modalRef = this.modalService.show(template, { class: 'modal-md submitpopup' });
