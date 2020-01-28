@@ -6,6 +6,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import {ApiService} from '../../api-service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-home',
@@ -22,25 +23,39 @@ export class HomeComponent implements OnInit {
   public stateslist: any;
   public citylist:any;
   public ready: any;
+  public useridval: any = null;
   public imgval: any;
   public countryList: any = [];
   public imagemodal: any = 1;
   public ErrCode:boolean;
   public collect_phone_array:any=[];
   public collect_email_array:any=[];
+  public date:any;
+  public myDate: any;
+
   public api_url:any = this.apiService.api_url;
   // public api_url: any = 'https://r245816wug.execute-api.us-east-1.amazonaws.com/dev/api/';
 
   constructor(public apiService:ApiService,public router: Router, public activatedroute: ActivatedRoute, private readonly meta: MetaService, public formBuilder: FormBuilder, public http: HttpClient, private modalService: BsModalService, public cookieservice: CookieService) {
 
+/** generating the user id **/
+this.apiService.postData('userid', undefined).subscribe((response: any) => {
+  this.useridval = response.userID;
+});
 
     this.getState();
     this.getCity();
+
     if (this.cookieservice.check('jwttoken') == false) {
       this.setTempToken();
     }
-
+    /** fetching the current date **/
+    
+      this.date = moment(this.myDate).format('MM/DD/YYYY');
+  
     this.signUpform = this.formBuilder.group({
+      user_id: [],
+      date_added:[],
       hospitalname: ['', Validators.required],
       contactperson: ['', Validators.required],
       email:['', [Validators.required, Validators.pattern(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/)]],
@@ -50,16 +65,18 @@ export class HomeComponent implements OnInit {
       address: ['', Validators.required],
       city: ['',Validators.required],
       state: ['', Validators.required],
-      speciality:['',Validators.required],
       zip:['',Validators.required],
       country:['',Validators.required],
       salesrepselect: this.activatedroute.snapshot.params.repid,
       type: ['hospital'],
+      mpimage: [],
       status:0, 
     },{
         validator: this.machpassword('password', 'confirmpassword')
     })
   }
+
+
   setTempToken() {
     const link = this.api_url + 'temptoken';
     this.http.post(link, {}).subscribe(res => {
@@ -215,25 +232,7 @@ machpassword(passwordkye: string, confirmpasswordkye: string) {
 
 /**submit function */
   doSubmit(template: TemplateRef<any>) {
-    //     if (this.configData.files) {
-
-    //   if (this.configData.files.length > 1)
-    //    { 
-    //      console.log("Errcode");
-    //      this.ErrCode = true; return; 
-    //   }
-    //   this.signUpform.value.mpimage =
-    //     {
-    //       "basepath": this.configData.files[0].upload.data.basepath + '/' + this.configData.path + '/',
-    //       "image": this.configData.files[0].upload.data.data.fileservername,
-    //       "name": this.configData.files[0].name,
-    //       "type": this.configData.files[0].type
-    //     };
-    // } else {
-    //   this.signUpform.value.mpimage = false;
-    // }
-
-    // console.log(this.ErrCode);
+  
     for (let i in this.signUpform.controls) {
       this.signUpform.controls[i].markAsTouched();
     }
@@ -244,7 +243,8 @@ machpassword(passwordkye: string, confirmpasswordkye: string) {
         delete this.signUpform.value.confirmpassword;
       }
       this.signUpform.value.contactphones = this.collect_phone_array;
-
+      this.signUpform.value.user_id=this.useridval;
+      this.signUpform.value.date_added=this.date;
      // console.log(this.signUpform.value);
       let data: any = {
         "source": "users",
@@ -253,6 +253,8 @@ machpassword(passwordkye: string, confirmpasswordkye: string) {
       };
       //console.log(this.cookieservice.get('jwttoken'));
       // this.successmodal = true;
+      //console.warn(data);
+      
       this.apiService.postData('addorupdatedata', data).subscribe(res => {
 
           let result: any = {};

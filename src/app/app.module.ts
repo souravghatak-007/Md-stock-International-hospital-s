@@ -14,6 +14,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { RepSignupComponent } from './components/rep-signup/rep-signup.component';
 import {ApiService} from './api-service';
 // import { FileUploadModule } from 'file-upload';
+import { MomentModule } from 'ngx-moment';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {ApiService} from './api-service';
     FormsModule,
     ModalModule.forRoot(),
     HttpClientModule,
+    MomentModule
     // FileUploadModule
     // CookieService
   ],
