@@ -207,7 +207,7 @@
                 <select class="form-control" placeholder="Select State" type="text"
                   [formControl]="signUpform.controls['country']" (blur)="inputUntouch(signUpform, 'country')">
                   <option value="">Select Country</option>
-                  <option *ngFor="let country of countryList" value="{{country._id}}">{{country.name}}</option>
+                  <option *ngFor="let country of countryList" value="{{country.name}}">{{country.name}}</option>
                 </select>
                 <span *ngIf="
                   signUpform.controls['country'].touched &&
